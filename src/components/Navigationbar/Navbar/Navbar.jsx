@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JS
 import "./Navbar.css";
-import domainexpansionlogo from '../../../Assets/domainExpansionLogo.svg'
-const Navbar = ({ brandName, brandLink, customClass }) => {
+import domainexpansionlogo from "../../../Assets/domainExpansionLogo.svg";
+
+const Navbar = ({ brandName, brandLink }) => {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActive = (path) => {
-    return location.pathname === path && location.pathname !== brandLink
-      ? "active"
-      : "";
+    return location.pathname === path ? "active" : "";
   };
 
   const navLinks = [
@@ -21,8 +21,12 @@ const Navbar = ({ brandName, brandLink, customClass }) => {
     { path: "/ContactUs", label: "CONTACT US", className: "projects" },
   ];
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className={`container-fluid pt-3 sticky-top ${customClass}`}>
+    <div className="container-fluid pt-3 sticky-top">
       <nav className="navbar navbar-expand-lg simple-navbar px-4">
         <a className="navbar-brand simple-brand" href={brandLink}>
           {brandName}
@@ -31,16 +35,17 @@ const Navbar = ({ brandName, brandLink, customClass }) => {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div
+          className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav ms-auto">
             {navLinks.map((link) =>
               link.label === "SOLUTIONS" ? (
@@ -52,6 +57,7 @@ const Navbar = ({ brandName, brandLink, customClass }) => {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    style={{color: "white"}}
                   >
                     {link.label}
                   </a>
@@ -85,6 +91,7 @@ const Navbar = ({ brandName, brandLink, customClass }) => {
                       link.path
                     )}`}
                     to={link.path}
+                    onClick={toggleMenu}
                   >
                     {link.label}
                   </Link>

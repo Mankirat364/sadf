@@ -1,6 +1,9 @@
 import React from "react";
 import './Home.css'
 import WhychooseUs from "../../components/HomeComponents/WhychooseUs";
+import Organization from "../../components/HomeComponents/Organization";
+import ByTheName from "../../components/HomeComponents/ByTheName";
+import BestSolutions from "../../components/HomeComponents/BestSolutions";
 const Home = () => {
   return <div className="HomePage">
     <div className='BrandingHerosec container-fluid'>
@@ -21,6 +24,9 @@ const Home = () => {
 
     </div>
     <WhychooseUs />
+    <Organization />
+    <ByTheName />
+    <BestSolutions />
   </div>;
 };
 
