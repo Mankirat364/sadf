@@ -1,0 +1,144 @@
+.BrandHeading h2{
+    color: #7dc000;
+    font-size: 6vw;
+}
+.homepsan{
+    font-weight: 500;
+}
+.outbox{
+    color: #7dc000;
+    text-align: center;
+    padding-top: 3vw;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.BrandHeading{
+    margin-top: -3vw;
+}
+.whychooseus {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  .chooseContent {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .chooseContent p:nth-child(1) {
+    text-transform: uppercase;
+    color: #d9ff00;
+    font-size: 1.2rem;
+  }
+  .chooseContent h1 {
+    color: #7dc000;
+    margin-top: -0.5rem;
+    font-size: 2.5rem;
+  }
+  
+  .chooseContent p:nth-child(3) {
+    color: #7dc000;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .aboutContent .services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .service {
+    position: relative;
+    border: 1px solid #d9ff00;
+    color: #d9ff00;
+    font-weight: bold;
+    width: 16vw;
+    height: 10vh;
+    display: flex;
+    font-size: 1.2vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .service:hover {
+    background-color: #d9ff00;
+    color: #000;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  .service.active {
+    background-color: #d9ff00;
+    color: #000;
+    border-color: #d9ff00;
+  }
+  
+  .diamond {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #d9ff00;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+.brandDetail{
+    min-height: 100vh;
+}
+.brandDetailBox1{
+    width: 65vw;
+    height: 80vh;
+    padding:7vw 4vw;
+
+}
+.brandDetailBox2{
+    width: 35vw;
+    height: 80vh;
+    padding: 3vw 1vw;
+    padding-right: 3vw;
+}
+.brandDetailBox1 h1{
+    color: #d9ff00;
+    font-size: 2.5vw;
+    font-weight: 700;
+}
+.checkboxesBrand{
+    flex-direction: column;
+}
+.checkBox{
+    width: 2.5vw;
+}
+.checkboxesBrand .mydivver{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.divver2{
+    margin-top: -1vw;
+}
+.checkboxesBrand .mydivver p{
+    font-size: 2.5vw;
+    color: #7dc000;
+    font-weight: 500;
+   padding-top: .5vw;
+}
+.innerbox2{
+    width: 100%;
+    border-radius: 12px;
+    height: 100%;
+    background-color: #141b15;
+    display: flex;
+    flex-direction: column;
+}
+.upInnerBox{
+    width: 100%;
+    height: 40%;
+}
